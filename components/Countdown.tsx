@@ -43,6 +43,9 @@ const Countdown = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 w-full max-w-5xl">
         {timeUnits.map((unit) => (
           <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             key={unit}
             className="flex flex-col items-center justify-center space-y-3"
             layout
@@ -50,7 +53,7 @@ const Countdown = () => {
             <MotionNumberFlow
               value={timeLeft[unit]}
               format={{ minimumIntegerDigits: 2 }}
-              className="text-5xl font-bold text-transparent text-blue-500 dark:text-blue-400"
+              className="text-5xl font-bold text-blue-500 dark:text-blue-400 animate-pulse"
               layout
             />
             <span className="text-lg text-gray-500 dark:text-gray-400">

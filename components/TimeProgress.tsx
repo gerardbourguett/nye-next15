@@ -5,9 +5,19 @@ import SocialShare from "./SocialShare";
 import NumberFlow from "@number-flow/react";
 import { motion, MotionConfig } from "motion/react";
 import { CURRENT_YEAR } from "@/app/data/constants";
-import { Progress } from "./ui/progress";
 
 const MotionNumberFlow = motion.create(NumberFlow);
+
+const AnimatedProgress = ({ value }: { value: number }) => (
+  <div className="h-4 bg-gray-800 rounded-full overflow-hidden">
+    <motion.div
+      className="h-full bg-blue-500"
+      initial={{ width: 0 }}
+      animate={{ width: `${value}%` }}
+      transition={{ duration: 1 }}
+    />
+  </div>
+);
 
 const TimeProgress = () => {
   const [timeLeft, setTimeLeft] = useState(0);
@@ -33,10 +43,8 @@ const TimeProgress = () => {
   return (
     <div>
       <div className="w-full">
-        <Progress
-          value={timeLeft}
-          className="h-4 bg-gray-800 rounded-full overflow-hidden"
-        />
+        <AnimatedProgress value={timeLeft} />
+
         <p className="text-gray-400 mt-4 text-center text-xl">
           <MotionConfig
             transition={{
