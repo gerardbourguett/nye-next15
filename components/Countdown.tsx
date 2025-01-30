@@ -53,7 +53,7 @@ const Countdown = () => {
             <MotionNumberFlow
               value={timeLeft[unit]}
               format={{ minimumIntegerDigits: 2 }}
-              className="text-5xl font-bold text-blue-500 dark:text-blue-400 animate-pulse"
+              className="text-5xl font-bold text-blue-600 dark:text-blue-400"
               layout
             />
             <span className="text-lg text-gray-500 dark:text-gray-400">
