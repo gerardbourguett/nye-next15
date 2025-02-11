@@ -52,7 +52,11 @@ const TimeProgress = () => {
             }}
           >
             <motion.span
+<<<<<<< HEAD
               className="inline-flex items-center px-[0.3em] text-2xl dark:text-white transition-colors duration-300"
+=======
+              className="inline-flex items-center px-[0.3em] text-2xl dark:text-white text-black transition-colors duration-300"
+>>>>>>> aaa2038ed0a7654623248e8535a4bf7cd29ff310
               layout
               style={{ borderRadius: 999 }}
             >
