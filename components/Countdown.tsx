@@ -9,7 +9,7 @@ const Countdown = () => {
   const [now, setNow] = useState(() => Date.now());
   const year = useMemo(() => new Date().getFullYear(), []);
   const targetDate = useMemo(
-    () => new Date(`December 31, ${year} 23:59:59`).getTime(),
+    () => new Date(`January 1, ${year + 1} 00:00:00`).getTime(),
     [year]
   );
 
@@ -53,7 +53,7 @@ const Countdown = () => {
             <MotionNumberFlow
               value={timeLeft[unit]}
               format={{ minimumIntegerDigits: 2 }}
-              className="text-5xl font-bold text-blue-500 dark:text-blue-400 animate-pulse"
+              className="text-5xl font-bold text-blue-700 dark:text-blue-400 animate-pulse"
               layout
             />
             <span className="text-lg text-gray-500 dark:text-gray-400">

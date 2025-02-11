@@ -45,14 +45,14 @@ const TimeProgress = () => {
       <div className="w-full">
         <AnimatedProgress value={timeLeft} />
 
-        <p className="text-gray-400 mt-4 text-center text-xl">
+        <p className="dark:text-gray-400 text-gray-600  mt-4 text-center text-xl">
           <MotionConfig
             transition={{
               layout: { duration: 0.9, bounce: 0, type: "spring" },
             }}
           >
             <motion.span
-              className="inline-flex items-center px-[0.3em] text-2xl text-white transition-colors duration-300"
+              className="inline-flex items-center px-[0.3em] text-2xl dark:text-white transition-colors duration-300"
               layout
               style={{ borderRadius: 999 }}
             >
